@@ -29,7 +29,7 @@ function onSpeak(e) {
     var chute = e.results[0][0].transcript
     exibeChuteNaTela(chute);
     verifica(chute);
-    console.log(e);
+    transformTextToNumber(chute);
 }
 var msg;
 var reticencia;

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <title>Número Secreto</title>
+    <title>Reconhecimento de Voz</title>
 </head>
 <body>
     <h1>Acerte o resultado</h1>
@@ -16,7 +16,9 @@
 
     <div id="chute" class="mensagem"></div>
 
-    <div id="feedback" class="feedback"></div>
+    <div id="feedback" class="feedback"><span class="teste"></span></div>
+
+    <button class="btn" id="btn">TENTAR NOVAMENTE</button>
 
     <script src="./app/geraNumero.js"></script>
     <script src="./app/reconhecimentoVoz.js"></script>

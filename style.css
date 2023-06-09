@@ -6,6 +6,10 @@
     --primary-color: #E8F9FD;
 }
 
+* {
+    font-size: 10px;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--primary-color);
@@ -20,12 +24,13 @@ body {
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 4rem;
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 4rem;
     margin-top: 20px;
+    border-bottom: 3px solid white;
 }
 
 .mensagem {
@@ -41,6 +46,24 @@ h3 {
     margin: 20px;
 }
 
-.feedback {
-    font-size: 50px;
+.btn {
+    margin-top: 20px;
+    padding: 20px;
+    color: #0AA1DD;
+    font-size: 1rem;
 }
+
+.feedback {
+    font-size: 3rem;
+}
+
+.teste {
+    animation: cursor 1s infinite;
+}
+
+@keyframes cursor {
+    0% { opacity: 1; }
+      49% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 0; }
+  }

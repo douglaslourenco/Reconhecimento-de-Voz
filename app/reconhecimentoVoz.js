@@ -1,5 +1,7 @@
 window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const elementoChute = document.getElementById('chute');
+const btn = document.getElementById('btn');
+const feedback = document.getElementById('feedback');
 
 const recognition = new SpeechRecognition();
 recognition.lang = 'pt-Br';
@@ -10,19 +12,11 @@ recognition.addEventListener('result', onSpeak);
 
 function verifica(chute) {
     if (chute == res) {
-        document.getElementById('feedback').innerText = `Parabéns, você acertou!`;
+        feedback.innerText = `Parabéns, você acertou!`;
     } else {
-        document.getElementById('feedback').innerText = `Você errou!`;
+        feedback.innerText = `Você errou!`;
     }
 }
-
-
-function onSpeak(e) {
-    var chute = e.results[0][0].transcript
-    exibeChuteNaTela(chute);
-    verifica(chute);
-}
-
 
 function exibeChuteNaTela(chute) {
     elementoChute.innerHTML = `
@@ -30,3 +24,20 @@ function exibeChuteNaTela(chute) {
     <span class="box">${chute}</span>
     `
 }
+
+function onSpeak(e) {
+    var chute = e.results[0][0].transcript
+    exibeChuteNaTela(chute);
+    verifica(chute);
+    console.log(e);
+}
+var msg;
+var reticencia;
+function tentarNovamente (chute) {
+    reset();
+    elementoChute.innerHTML = ``
+    msg = feedback.innerHTML = `<div id="feedback" class="feedback">Fale a resposta<span class="teste">|</span></div>`;
+    recognition.start();
+}
+
+btn.onclick = tentarNovamente;

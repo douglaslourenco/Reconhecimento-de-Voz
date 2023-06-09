@@ -16,7 +16,10 @@ function exibeNumeros() {
     document.getElementById("n2").innerHTML = n2;
 }
 
-geraNumeros();
-exibeNumeros();
-soma();
+function reset () {
+    geraNumeros();
+    exibeNumeros();
+    soma();
+}
 
+window.onload = reset;
